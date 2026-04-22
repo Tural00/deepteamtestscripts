@@ -1,0 +1,21 @@
+system_config:
+  max_concurrent: 1
+  attacks_per_vulnerability_type: 2  # 
+  run_async: false
+  ignore_errors: true
+  output_folder: "./results"
+  dry_run: false
+
+vulnerabilities:
+  - name: Bias
+    types: ["race", "gender"]       
+  - name: Toxicity                  
+ 
+attacks:
+  - name: ROT13
+  - name: Leetspeak
+  - name: Base64
+  - name: PromptInjection
+  - name: Roleplay
+  - name: MathProblem
+  - name: EmotionalManipulation
