@@ -1,0 +1,25 @@
+system_config:
+  max_concurrent: 1
+  attacks_per_vulnerability_type: 2
+  run_async: false
+  ignore_errors: true
+  output_folder: "./results"
+  dry_run: false
+
+vulnerabilities:
+  - name: GoalTheft
+    types:
+      - escalating_probing
+      - cooperative_dialogue
+
+attacks:
+  - name: LinearJailbreaking
+    weight: 1
+    num_turns: 5
+    turn_level_attacks:
+      - Roleplay
+      - PromptInjection
+      - ROT13
+      - Leetspeak
+      - MathProblem
+ 
